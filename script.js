@@ -16,14 +16,20 @@ hall.addEventListener("click", function(event) {
         return;
     }
 
+    const number = Number(seat.dataset.n);
+
     if (seat.classList.contains("taken")) {
+        seat.querySelector("span").textContent = seat.dataset.n;
+        seat.classList.remove("taken");
+        free.textContent = Number(free.textContent) + 1;
+        status.textContent = "Seat " + number + " is now free.";
         return;
     }
 
     const name = who.value.trim();
     const countText = many.value.trim();
     const count = Number(countText);
-    const start = Number(seat.dataset.n);
+    const start = number;
 
     many.setCustomValidity("");
 
