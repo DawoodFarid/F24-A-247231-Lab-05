@@ -61,5 +61,9 @@ hall.addEventListener("click", function(event) {
     });
 
     free.textContent = Number(free.textContent) - count;
+    if (name === "") {
+    status.textContent = "undefined";
+} else {
     status.textContent = name + " has taken " + count + " seats.";
+}
 });
