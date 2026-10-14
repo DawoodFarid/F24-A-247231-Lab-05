@@ -19,6 +19,28 @@ main {
     min-height: 400px;
 }
 
+#status {
+    margin-bottom: 20px;
+}
+
+#who, #many {
+    padding: 8px;
+    margin: 5px;
+}
+
+#hall {
+    display: grid;
+    grid-template-columns: repeat(4, 70px);
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.seat {
+    height: 60px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
 footer {
     background-color: green;
     color: white;
