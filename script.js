@@ -29,23 +29,26 @@ hall.addEventListener("click", function(event) {
     const name = who.value.trim();
     const countText = many.value.trim();
     const count = Number(countText);
-    const start = number;
 
     many.setCustomValidity("");
 
-    if (countText === "" || !Number.isInteger(count) || count < 1) {
+    if (
+        countText === "" ||
+        !Number.isInteger(count) ||
+        count < 1
+    ) {
         many.setCustomValidity("not a number");
         many.reportValidity();
         return;
     }
 
-    if (start + count - 1 > 8) {
+    if (number + count - 1 > 8) {
         return;
     }
 
     const seats = [];
 
-    for (let i = start; i < start + count; i++) {
+    for (let i = number; i < number + count; i++) {
         const nextSeat = document.querySelector("#seat-" + i);
 
         if (!nextSeat || nextSeat.classList.contains("taken")) {
@@ -61,9 +64,10 @@ hall.addEventListener("click", function(event) {
     });
 
     free.textContent = Number(free.textContent) - count;
+
     if (name === "") {
-    status.textContent = "undefined";
-} else {
-    status.textContent = name + " has taken " + count + " seats.";
-}
+        status.textContent = "undefined";
+    } else {
+        status.textContent = name + " has taken " + count + " seats.";
+    }
 });

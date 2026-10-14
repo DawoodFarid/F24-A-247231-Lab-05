@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Cafe - The Seats</title>
+    <title>The Green Cafe - Seats</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -14,32 +15,44 @@
     </header>
 
     <main>
-         <p id="status">Welcome to the Green Cafe seats page.</p>
+        <p id="status">Welcome to The Green Cafe. Choose your seats.</p>
 
-        <p>Free seats: <span id="free">8</span></p>
+        <section class="summary">
+            <div class="free-card">
+                <span>Free seats</span>
+                <span id="free">8</span>
+            </div>
+        </section>
 
-        <label for="who">Name:</label>
-        <input type="text" id="who">
+        <section class="booking-form">
+            <div class="field">
+                <label for="who">Student name</label>
+                <input type="text" id="who" placeholder="Enter your name">
+            </div>
 
-        <label for="many">Count:</label>
-        <input type="text" id="many">
+            <div class="field">
+                <label for="many">Number of seats</label>
+                <input type="text" id="many" placeholder="e.g. 3">
+            </div>
+        </section>
+
+        <h2 class="section-title">Choose Your Seats</h2>
 
         <div id="hall">
-            <button class="seat" data-n="1" id="seat-1"><span>1</span></button>
-            <button class="seat" data-n="2" id="seat-2"><span>2</span></button>
-            <button class="seat" data-n="3" id="seat-3"><span>3</span></button>
-            <button class="seat" data-n="4" id="seat-4"><span>4</span></button>
-            <button class="seat" data-n="5" id="seat-5"><span>5</span></button>
-            <button class="seat" data-n="6" id="seat-6"><span>6</span></button>
-            <button class="seat" data-n="7" id="seat-7"><span>7</span></button>
-            <button class="seat" data-n="8" id="seat-8"><span>8</span></button>
+            <button type="button" class="seat" data-n="1" id="seat-1"><span>1</span></button>
+            <button type="button" class="seat" data-n="2" id="seat-2"><span>2</span></button>
+            <button type="button" class="seat" data-n="3" id="seat-3"><span>3</span></button>
+            <button type="button" class="seat" data-n="4" id="seat-4"><span>4</span></button>
+            <button type="button" class="seat" data-n="5" id="seat-5"><span>5</span></button>
+            <button type="button" class="seat" data-n="6" id="seat-6"><span>6</span></button>
+            <button type="button" class="seat" data-n="7" id="seat-7"><span>7</span></button>
+            <button type="button" class="seat" data-n="8" id="seat-8"><span>8</span></button>
         </div>
     </main>
 
     <footer>
         <p>Roll Number: 247231</p>
     </footer>
-    <script src="script.js"></script>
 
 </body>
 </html>
