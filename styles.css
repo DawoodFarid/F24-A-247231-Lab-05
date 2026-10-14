@@ -47,3 +47,9 @@ footer {
     text-align: center;
     padding: 15px;
 }
+
+
+.seat.taken {
+    background-color: green;
+    color: white;
+}
