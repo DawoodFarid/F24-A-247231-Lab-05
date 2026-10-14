@@ -21,10 +21,19 @@ hall.addEventListener("click", function(event) {
     }
 
     const name = who.value.trim();
-    const count = Number(many.value);
+    const countText = many.value.trim();
+    const count = Number(countText);
     const start = Number(seat.dataset.n);
 
-    if (!Number.isInteger(count) || count < 1 || start + count - 1 > 8) {
+    many.setCustomValidity("");
+
+    if (countText === "" || !Number.isInteger(count) || count < 1) {
+        many.setCustomValidity("not a number");
+        many.reportValidity();
+        return;
+    }
+
+    if (start + count - 1 > 8) {
         return;
     }
 
